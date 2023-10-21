@@ -41,7 +41,7 @@ async function run() {
             res.send(result);
         })
 
-        // update
+        //  update form
 
         app.get('/update/:id', async (req, res) => {
             const id = req.params.id;
