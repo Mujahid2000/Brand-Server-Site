@@ -39,6 +39,16 @@ async function run() {
         })
         // send data to database
 
+        app.get('/product/:brand', async(req, res) =>{
+        const brand = req.params.brand;
+        const query = {brand:(brand)}
+        const cursor = await CarsCollection.find(query)
+        console.log(brand)
+        res.send(brand)
+        })
+
+
+
     app.post('/carmodel', async(req, res) =>{
         const brandData = req.body;
         console.log(brandData);
